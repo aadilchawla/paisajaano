@@ -1,0 +1,354 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1d4ed8;
+    --text-color: #1f2937;
+    --light-text: #6b7280;
+    --background-light: #f3f4f6;
+    --white: #ffffff;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.cta-button {
+    background: var(--primary-color);
+    color: var(--white) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(29, 78, 216, 0.9)), url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.primary-button, .secondary-button {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.primary-button {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.secondary-button {
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.primary-button:hover, .secondary-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.bg-light {
+    background: var(--background-light);
+}
+
+.bg-primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* Grid Layouts */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Cards */
+.problem-card, .solution-card, .feature-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.problem-card:hover, .solution-card:hover, .feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card {
+    text-align: center;
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Materials Section */
+.materials-showcase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.material-item {
+    text-align: center;
+}
+
+.material-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Stats Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.stat-card {
+    text-align: center;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+}
+
+/* Contact Form */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form button {
+    background: var(--white);
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background: #1a365d;
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-section a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--text-color);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .grid-2,
+    .grid-3,
+    .materials-showcase,
+    .stats-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-group {
+        flex-direction: column;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+} 
