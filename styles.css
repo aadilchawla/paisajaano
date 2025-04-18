@@ -85,7 +85,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(29, 78, 216, 0.9)), url('images/hero-bg.jpg');
+    background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(29, 78, 216, 0.9)), url('https://via.placeholder.com/1920x1080.png?text=PAISAJAANO');
     background-size: cover;
     background-position: center;
     color: var(--white);
