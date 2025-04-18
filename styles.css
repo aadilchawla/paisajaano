@@ -1031,4 +1031,203 @@ body {
     .seminar-block {
         padding: 1.5rem;
     }
+}
+
+/* Resources Section Styles */
+#resources {
+    background: var(--background-light);
+}
+
+#resources h2 {
+    margin-bottom: 3rem;
+}
+
+#resources h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin: 3rem 0 2rem;
+    text-align: center;
+}
+
+/* Timeline Styles */
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.timeline-phase {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.phase-duration {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.phase-tasks {
+    list-style: none;
+    padding: 0;
+}
+
+.phase-tasks li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.phase-tasks li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Schemes Section */
+.schemes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.scheme-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scheme-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.scheme-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.scheme-card li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.scheme-card li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Teaching Materials */
+.teaching-materials .materials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.material-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.material-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.material-card h4 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.material-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.material-card li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.material-card li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success);
+}
+
+/* Seminar Section */
+.seminar-timeline {
+    display: grid;
+    gap: 2rem;
+}
+
+.seminar-block {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.seminar-block h4 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.stations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.station {
+    background: var(--background-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.station h5 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Updates */
+@media (max-width: 1024px) {
+    .timeline-grid,
+    .schemes-grid,
+    .teaching-materials .materials-grid,
+    .stations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-grid,
+    .schemes-grid,
+    .teaching-materials .materials-grid,
+    .stations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #resources h3 {
+        font-size: 1.5rem;
+    }
 } 
