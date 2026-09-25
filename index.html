@@ -5,28 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="PAISAJAANO - Financial Education Program for Underprivileged Youth in Rajasthan. Learn practical money skills, savings habits, and access government schemes.">
     <meta name="keywords" content="financial education, Rajasthan youth, money management, savings, PMJDY, financial literacy, rural education">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://paisajaano.org/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PAISAJAANO | Financial Education for Rajasthan's Youth">
+    <meta property="og:description" content="Financial Education Program for Underprivileged Youth in Rajasthan. Learn practical money skills, savings habits, and access government schemes.">
+    <meta property="og:url" content="https://paisajaano.org/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PAISAJAANO | Financial Education for Rajasthan's Youth">
+    <meta name="twitter:description" content="Financial Education Program for Underprivileged Youth in Rajasthan.">
     <title>PAISAJAANO | Financial Education for Rajasthan's Youth</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232563eb'/%3E%3Ctext x='50' y='68' font-size='55' fill='white' text-anchor='middle' font-family='sans-serif' font-weight='bold'%3E%E2%82%B9%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PAISAJAANO",
+        "description": "Financial Education Program for Underprivileged Youth in Rajasthan.",
+        "email": "aadilchawla018@gmail.com",
+        "telephone": "+919167294041",
+        "areaServed": "Rajasthan, India"
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">PAISAJAANO</a>
-            <div class="nav-links">
+            <a href="#main" class="logo">PAISAJAANO</a>
+            <div class="nav-links" id="navLinks">
                 <a href="#about">About</a>
                 <a href="#program">Program</a>
                 <a href="#materials">Materials</a>
                 <a href="#partners">Partners</a>
                 <a href="#contact" class="cta-button">Get Involved</a>
             </div>
-            <button class="mobile-menu">
+            <button class="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="main">
         <div class="container">
             <h1>Empowering Rajasthan's Youth</h1>
             <p class="subtitle">Simple financial education for a stronger future</p>
@@ -93,17 +116,17 @@
             <h2>Teaching Materials</h2>
             <div class="materials-showcase">
                 <div class="material-item">
-                    <img src="images/flipbook.jpg" alt="Picture Flipbook" class="material-image">
+                    <div class="material-icon"><i class="fas fa-book-open"></i></div>
                     <h3>Picture Flipbook</h3>
                     <p>Visual stories showing real-life financial decisions</p>
                 </div>
                 <div class="material-item">
-                    <img src="images/calendar.jpg" alt="Savings Calendar" class="material-image">
+                    <div class="material-icon"><i class="fas fa-calendar-check"></i></div>
                     <h3>Savings Calendar</h3>
                     <p>Track your progress with stickers and celebrations</p>
                 </div>
                 <div class="material-item">
-                    <img src="images/budget-cloth.jpg" alt="Budget Cloth" class="material-image">
+                    <div class="material-icon"><i class="fas fa-layer-group"></i></div>
                     <h3>Budget Cloth</h3>
                     <p>Interactive tool for family expense planning</p>
                 </div>
@@ -170,18 +193,27 @@
                     <p><i class="fas fa-envelope"></i> aadilchawla018@gmail.com</p>
                     <p><i class="fas fa-clock"></i> Monday-Saturday, 9am-6pm</p>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <select required>
+                <form class="contact-form" id="contactForm" novalidate>
+                    <label class="visually-hidden" for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required>
+
+                    <label class="visually-hidden" for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="email" required>
+
+                    <label class="visually-hidden" for="helpType">How would you like to help?</label>
+                    <select id="helpType" name="helpType" required>
                         <option value="">How would you like to help?</option>
                         <option value="volunteer">Become a Facilitator</option>
                         <option value="host">Host a Session</option>
                         <option value="sponsor">Sponsor Materials</option>
                         <option value="other">Other Support</option>
                     </select>
-                    <textarea placeholder="Your Message" required></textarea>
+
+                    <label class="visually-hidden" for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
                     <button type="submit" class="primary-button">Send Message</button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </div>
@@ -204,15 +236,15 @@
                 <div class="footer-section">
                     <h4>Connect With Us</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 PAISAJAANO. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> PAISAJAANO. All rights reserved.</p>
             </div>
         </div>
     </footer>
